@@ -1,0 +1,58 @@
+<html>
+
+    <head>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/loopr_audio.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script>
+
+            randomColor = function () {
+                    return "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ",1)";
+                };
+
+            $(document).ready(function () {
+
+                //for each div, let's get the URL and give each div the audio functions
+                $('#sp div').each(function () {
+                    addAudioProperties(this);
+                });
+
+                //on click, check to see if we have a grey box or a colored box
+                //play or stop accordingly
+                $('#sp div').click(function () {
+                    //console.log($(this).css('background-color'));
+                    if ($(this).css('background-color') === 'rgb(128, 128, 128)')
+                    {
+                        $(this).css('background', randomColor());
+                        this.addToLoops();
+                    }else{
+                        this.stop();
+                        this.removeLoop();
+                        $(this).css('background','grey');
+                    }
+                });
+            });
+        </script>
+        <title>Loopr</title>
+    </head>
+
+
+    <body style = "margin:0px;padding:0px" >
+
+        <canvas id="beat-bar"></canvas>
+        <script src="js/loopr_canvas.js"></script>
+        <div id="sp">
+            <h1>Bass</h1>
+            <div class="pad" id="pad1" data-sound="../sounds/VFX2Bass3128BPMcopy.wav"></div>
+            <h1>Loops</h1>
+            <div class="pad" id="pad2" data-sound="sounds/VEEElectroLoop001.wav"></div>
+            <div class="pad" id="pad3" data-sound="sounds/VEH2SpecialSounds-36copy.wav"></div>
+            <div class="pad" id="pad4" data-sound="sounds/VFX2Loop006128BPMcopy.wav"></div>
+            <h1>Drums</h1>
+            <div class="pad" id="pad5" data-sound="sounds/VFX2Beat128BPMcopy.wav"></div>
+        </div>
+
+    </body>
+</html>

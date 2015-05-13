@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded());
 
 // this is the line that tells our server to use the "/static" folder for static content
-app.use(express.static(__dirname + "/static"));
+app.use(express.static(__dirname + "/"));
 // try printing out __dirname using console.log to see what it is and why we use it
 
 // This sets the location where express will look for the ejs views
@@ -38,16 +38,16 @@ app.get('/', function (req, res){
 // app.post('/users', function (req, res){
 //     console.log("POST DATA \n\n", req.body)
 //     //code to add user to db goes here!
-//     // redirect the user back to the root route.  
+//     // redirect the user back to the root route.
 //     res.redirect('/')
 // });
 
 // app.get("/users", function (request, response){
 //     // hard-coded user data
 //     var users_array = [
-//         {name: "Michael", email: "michael@codingdojo.com"}, 
-//         {name: "Jay", email: "jay@codingdojo.com"}, 
-//         {name: "Rory", email: "rory@codingdojo.com"}, 
+//         {name: "Michael", email: "michael@codingdojo.com"},
+//         {name: "Jay", email: "jay@codingdojo.com"},
+//         {name: "Rory", email: "rory@codingdojo.com"},
 //         {name: "Andrew", email: "andrew@codingdojo.com"}
 //     ];
 //     response.render('users', {users: users_array});
