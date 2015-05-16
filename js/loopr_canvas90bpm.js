@@ -31,7 +31,7 @@ var playedOnce = false;
 
 function step(timestamp) {
     if (!triggered && !playedOnce){window.requestAnimationFrame(step);return;}
-    var maxBarNormal = element.width * (128 / 60);
+    var maxBarNormal = element.width * (90 / 60);
     //console.log(element.width);
     //console.log(maxBarNormal);
     var now = new Date().getTime();
@@ -63,7 +63,7 @@ function step(timestamp) {
     }
 
     canvasContext.fillStyle = "#FF0000";
-    canvasContext.fillRect(0, 0, barWidth, 20)
+    canvasContext.fillRect(0, 25, barWidth, 100)
 
     var pulseInterval = (maxBarNormal / 32) - 2.5;
     var downCount = Math.floor(barWidth  / pulseInterval);
