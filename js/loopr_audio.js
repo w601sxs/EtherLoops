@@ -96,6 +96,7 @@ function addAudioProperties(object) {
                 var temp = loops[loops.length-1];
                 loops[loops.length-1] = loops[i];
                 loops[i] = temp;
+                // loops[i].stop();
                 break;
             }
         }
@@ -131,9 +132,6 @@ function playSound(buffer) {
   source.start(0);                           // play the source now
                                              // note: on older systems, may have to use deprecated noteOn(time);
 }
-
-loadMusic('sounds/VFX2Beat128BPMcopy.wav');
-//playSound(musicBuffer);
 
 function createNewContext()
 {
