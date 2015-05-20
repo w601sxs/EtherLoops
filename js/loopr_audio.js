@@ -35,6 +35,14 @@ function restartAllLoops() {
     //beatTimer = 0;
 }
 
+function destroyAllLoops() {
+  for (var i = 0; i < loops.length; i++)
+  {
+      loops[i].stop();
+  }
+  loops = [];
+}
+
 function addAudioProperties(object) {
     object.name = object.id;
     object.source = $(object).data('sound');

@@ -29,9 +29,25 @@ var downBeat = false;
 var downCounts = [];
 var playedOnce = false;
 
+var bpm = 128;
+
+function changeBPM(newBPM)
+{
+    destroyAllLoops();
+    element = document.getElementById("beat-bar");
+    canvasContext = element.getContext("2d");
+    triggered = false;
+    playedOnce = false;
+    bpm = newBPM;
+    beatTimer = 0;
+    console.log('changing');
+}
+
 function step(timestamp) {
     if (!triggered && !playedOnce){window.requestAnimationFrame(step);return;}
-    var maxBarNormal = element.width * (128 / 60);
+    // console.log(element);
+    var maxBarNormal = element.width * (bpm / 60);
+    // console.log(element.width)
     //console.log(element.width);
     //console.log(maxBarNormal);
     var now = new Date().getTime();
@@ -51,19 +67,20 @@ function step(timestamp) {
 
     if (barWidth >= element.width || !playedOnce)
     {
+        console.log("starting")
         barWidth = 0;
         beatTimer = 0;
         downBeat = true;
         downCounts = [];
         restartAllLoops();
-        //triggered = false;
         playedOnce = true;
     } else {
         //downBeat = false;
     }
 
     canvasContext.fillStyle = "#FF0000";
-    canvasContext.fillRect(0, 0, barWidth, 20)
+
+    canvasContext.fillRect(0, 0, barWidth, 20);
 
     var pulseInterval = (maxBarNormal / 32) - 2.5;
     var downCount = Math.floor(barWidth  / pulseInterval);
@@ -73,7 +90,7 @@ function step(timestamp) {
     {
         downCounts.push(downCount);
         downBeat = true;
-        console.log('true');
+        // console.log('true');
     }
 
     for (var i = 0; i < loops.length; i++)

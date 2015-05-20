@@ -12,45 +12,70 @@
                     return "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ",1)";
                 };
 
+
+
             $(document).ready(function () {
-                
+
+                // $('#wrapper').load('partials/128bpm.html');
+
                 //for each div, let's get the URL and give each div the audio functions
                 $('#sp span').each(function () {
                     addAudioProperties(this);
                 });
 
-                //on click, check to see if we have a grey box or a colored box
+            });
+
+            $(document).on('click','a.new-bpm',function(){
+                 var bpm = $(this).attr('bpm');
+                 $('#wrapper').load('partials/' + bpm + 'bpm.html', function(){
+                    $('#sp span').each(function () {
+                        addAudioProperties(this);
+                    });
+                    changeBPM(bpm);
+                 });
+                 // $.getScript("js/loopr_canvas.js", function(){
+                 //    $('#sp span').each(function () {
+                 //        addAudioProperties(this);
+                 //    });
+                 //    changeBPM($(this).attr('bpm'));
+                 // });
+                 
+                return false;
+            });
+
+            //on click, check to see if we have a grey box or a colored box
                 //play or stop accordingly
-                $('#sp span').click(function () {
-                    // console.log($(this).css('background-color'));
-                    if ($(this).css('background-color') === 'rgba(0, 0, 0, 0)')
-                    {
-                        $(this).css('background-color', 'rgba(0, 0, 1, 0)');
-                        this.addToLoops();
-                    }else{
-                        this.stop();
-                        this.removeLoop();
-                        $(this).css('background-color','rgba(0, 0, 0, 0)');
-                        $(this).css('opacity',1);
-                    }
-                });
+
+            $(document).on('click','#sp span',function(){
+                if ($(this).css('background-color') === 'rgba(0, 0, 0, 0)')
+                {
+                    $(this).css('background-color', 'rgba(0, 0, 1, 0)');
+                    this.addToLoops();
+                }else{
+                    this.stop();
+                    this.removeLoop();
+                    $(this).css('background-color','rgba(0, 0, 0, 0)');
+                    $(this).css('opacity',1);
+                }
             });
 
             $(window).load(function(){
-            $('a.btn').click(function(){
-                $( this ).toggleClass( "active" );
-            });
+                $('a.btn').click(function(){
+                    $( this ).toggleClass( "active" );
+                });
             });
         </script>
         <title>Loopr</title>
     </head>
 
 
+
 <body>
+<div id='wrapper'>
     <div class='background'>
-        <p><a href='#'>140</a> | <a class='tempo' href='index.html'>128</a> | <a href='90.html'>90</a></p>
+        <p><a class='new-bpm' href='#' bpm='140'>140</a> | <a class='tempo' href='#' bpm='128'>128</a> | <a class='new-bpm' href='#' bpm='90'>90</a></p>
         <canvas id="beat-bar"></canvas>
-        <script src="js/loopr_canvas.js"></script>
+       
         <div class='backgroundlayer'>
             <div id="sp" class="button-group-navigation" target="_blank">
                 <div class="bass">
@@ -83,5 +108,8 @@
         
         </div>
     </div>
+     
+</div>
+<script src="js/loopr_canvas.js"></script>
 </body>
 </html>
