@@ -8,9 +8,9 @@
         <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
         <script>
             
-            // randomColor = function () {
-            //         return "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ",1)";
-            //     };
+            randomColor = function () {
+                    return "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ",1)";
+                };
 
             $(document).ready(function () {
                 
@@ -25,12 +25,12 @@
                     // console.log($(this).css('background-color'));
                     if ($(this).css('background-color') === 'rgba(0, 0, 0, 0)')
                     {
-                        // $(this).css('background', randomColor());
+                        $(this).css('background-color', 'rgba(0, 0, 1, 0)');
                         this.addToLoops();
                     }else{
                         this.stop();
                         this.removeLoop();
-                        // $(this).css('background','grey');
+                        $(this).css('background-color','rgba(0, 0, 0, 0)');
                     }
                 });
             });
@@ -47,7 +47,7 @@
 
 <body>
     <div class='background'>
-        <p><a href='#'>140</a> | <a class='tempo' href='#'>128</a> | <a href='90.html'>90</a></p>
+        <p><a href='#'>140</a> | <a class='tempo' href='index.html'>128</a> | <a href='90.html'>90</a></p>
         <canvas id="beat-bar"></canvas>
         <script src="js/loopr_canvas.js"></script>
         <div class='backgroundlayer'>

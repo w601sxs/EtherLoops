@@ -81,6 +81,9 @@ a:hover {
     font-size:25px;
 }
 
+.btn:hover {
+    border:3px solid gray;
+}
 .btn.active {
     border:3px solid #00CC00;
     color:#00CC00;

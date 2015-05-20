@@ -63,7 +63,7 @@ function step(timestamp) {
     }
 
     canvasContext.fillStyle = "#FF0000";
-    canvasContext.fillRect(0, 25, barWidth, 100)
+    canvasContext.fillRect(0, 0, barWidth, 20)
 
     var pulseInterval = (maxBarNormal / 32) - 2.5;
     var downCount = Math.floor(barWidth  / pulseInterval);
