@@ -34,7 +34,10 @@
                     });
                     changeBPM(bpm);
                  });
-                return false;
+		 context.resume().then(() => {
+    			console.log('Playback resumed successfully');
+  		 });
+                 return false;
             });
 
             //on click, check to see if we have a grey box or a colored box
