@@ -27,6 +27,15 @@
                 $('#sp span').each(function () {
                     addAudioProperties(this);
                 });
+		    
+		$menuLeft = $('.pushmenu-left');
+		$nav_list = $('#nav_list');
+		
+		$nav_list.click(function() {
+			$(this).toggleClass('active');
+			$('.pushmenu-push').toggleClass('pushmenu-push-toright');
+			$menuLeft.toggleClass('pushmenu-open');
+		});
 		  
             });
             //clicking one of the bpm options will load the appropriate partial, add the audio properties to each span, and then reset the .js to the new beat
@@ -87,7 +96,38 @@
         <title>EtherLoops</title>
     </head>
 
-<body>
+<body class="pushmenu-push">
+<!-- MENU STUFF -->
+<nav class="pushmenu pushmenu-left">
+    <h3>Menu</h3>
+    <a href="#">Home</a>
+    <a href="#">Nav2</a>
+    <a href="#">Nav3</a>
+    <a href="#">Nav4</a>
+    <a href="#">Nav5</a>
+    <a href="#">Nav6</a>
+    <a href="#">Nav7</a>
+  </nav>
+  
+<div class="container">
+        <div class="main">
+        <section class="buttonset">
+            <div id="nav_list">Menu</div>
+        </section>
+      
+    <section class="content">
+      <h1>Slideout Navigation</h1>
+      <p>
+        
+      </p>
+      
+    </section><!-- End Content -->
+  </div><!-- End Main -->
+</div><!-- End Container --> 
+	
+	
+<!-- AUDIO STUFF -->	
+	
 <div id='wrapper'>
     <div class='background'>
         <!--
