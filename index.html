@@ -1,18 +1,15 @@
 <html>
 
     <head>
-        <script src="js/jquery.min.js"></script>
-	<!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
             
 	
         <script src="js/loopr_audio.js"></script>
         
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
         <script>
             
             randomColor = function () {
@@ -24,7 +21,7 @@
             $(document).ready(function () {
 
                 // $('#wrapper').load('partials/128bpm.html');
-
+		$(".button-collapse").sidenav();
                 //for each div, let's get the URL and give each div the audio functions
                 $('#sp span').each(function () {
                     addAudioProperties(this);
@@ -87,12 +84,6 @@
                 });
             });
             
-$('.button-collapse').sidenav({
-      menuWidth: 300, // Default is 240
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
-  $('.collapsible').collapsible();
 		
         </script>
 	
@@ -142,36 +133,28 @@ $('.button-collapse').sidenav({
      
 </div>
 <script src="js/loopr_canvas.js"></script>
-<nav>
 
-  <ul class="hide-on-med-and-down">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-  </ul>
-  <ul id="slide-out" class="side-nav fixed">
-    <ul>
-    <li><img src= "http://cs629327.vk.me/v629327473/db66/r051joYFRX0.jpg" />
-    </li>
-    </ul>
-      <li class="bold"><a href="#!" class="waves-effect waves-teal">First Sidebar Link</a></li>
-      <li class="bold"><a href="#!" class="">Second Sidebar Link</a></li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header waves-effect waves-teal">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#!">First</a></li>
-                <li><a href="#!">Second</a></li>
-                <li><a href="#!">Third</a></li>
-                <li><a href="#!">Fourth</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-</nav>
+<!-- Navbar -->
+	
+ <div class="navbar-fixed">
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+   <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
 </body>
 </html>
