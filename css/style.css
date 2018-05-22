@@ -138,10 +138,11 @@ a:inactive{
     }
 
 
+
 .pushmenu { /*this is the nav*/
   background: #3c3933;
   font-family: Arial, Helvetics, sans-serif;
-  width: 40%;
+  width: 240px;
   height: 100%;
   top: 0;
   z-index: 1000;
@@ -155,7 +156,7 @@ a:inactive{
   padding: 15px 20px;
   margin: 0;
   background: #282522;    
-  height: 100px;
+  height: 16px;
 }
 
 .pushmenu a {
@@ -205,7 +206,7 @@ a:inactive{
 }
 
 #nav_list {
-  background: url(https://raw.github.com/w601sxs/EtherLoops/master/icon_nav.png) no-repeat left top;
+  background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat left top;
   cursor: pointer;
   height: 27px;
   width: 33px;
@@ -218,7 +219,7 @@ nav-list.active {
 
  .buttonset {
       background: #00A287;
-      height: 100px;
+      height: 16px;
       padding: 10px 20px 20px;
  }
  
