@@ -37,18 +37,7 @@
 			$menuLeft.toggleClass('pushmenu-open');
 		});
 		    
-		$('.modal').modal();
- 		$('.trigger-modal').modal();
-		    
-		var a = document.getElementById("mylink");
-		a.onclick = function() {
-			$('.modal').modal();
- 			$('.trigger-modal').modal();
-			console.log("yaoowza");
-			jQuery('#modal1').trigger('click');
-			return false;
-		}
-			
+		
             });
 		
             
@@ -106,7 +95,9 @@
             });
             
 	
-
+	jQuery(document).ready(function(e) {
+    jQuery('#mymodal').trigger('click');
+});
 	
         </script>
 	
@@ -190,18 +181,28 @@
 	
 <!-- POPUP MODAL BUTTON BOOTSTRAP -->
 
-<a id="mylink" class="waves-effect waves-light btn view" data-target="modal1">View Scores 5</a>
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+<button type="button" id="mymodal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
 </div>
-
 
 
 </body>
