@@ -39,7 +39,17 @@
 		    
 		$('.modal').modal();
  		$('.trigger-modal').modal();
+		    
+		var a = document.getElementById("mylink");
+		a.onclick = function() {
+			$('.modal').modal();
+ 			$('.trigger-modal').modal();
+			return false;
+		}
+			
             });
+		
+            
             //clicking one of the bpm options will load the appropriate partial, add the audio properties to each span, and then reset the .js to the new beat
             $(document).on('click','a.new-bpm',function(){
                  var bpm = $(this).attr('bpm');
@@ -186,7 +196,7 @@
     <p>A bunch of text</p>
   </div>
   <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    <a id="mylink" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
   </div>
 </div>
 
