@@ -64,6 +64,10 @@ a:hover {
     color: #CC0000;
 }
 
+a:inactive{
+    background:#2c3e50;
+}a
+
 .btn {
     width: 5px;
     height: 5px;
