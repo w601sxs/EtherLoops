@@ -37,6 +37,22 @@
 			$menuLeft.toggleClass('pushmenu-open');
 		});
 		    
+		    
+(function ($) {
+    $(function () {
+
+        //initialize all modals           
+        $('.modal').modal();
+
+        //now you can open modal from code
+        $('#modal1').modal('open');
+
+        //or by click on trigger
+        $('.trigger-modal').modal();
+
+    }); // end of document ready
+})(jQuery); // end of jQuery name space
+		    
 		  
             });
             //clicking one of the bpm options will load the appropriate partial, add the audio properties to each span, and then reset the .js to the new beat
@@ -94,24 +110,7 @@
             
 	
 
-		(function ($) {
-    $(function () {
-
-        //initialize all modals           
-        $('.modal').modal();
-
-        //now you can open modal from code
-        $('#modal1').modal('open');
-
-        //or by click on trigger
-        $('.trigger-modal').modal();
-
-    }); // end of document ready
-})(jQuery); // end of jQuery name space
-
-
-
-		
+	
         </script>
 	
         <title>EtherLoops</title>
