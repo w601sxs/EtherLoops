@@ -141,7 +141,7 @@ a:inactive{
 .pushmenu { /*this is the nav*/
   background: #3c3933;
   font-family: Arial, Helvetics, sans-serif;
-  width: 240px;
+  width: 40%;
   height: 100%;
   top: 0;
   z-index: 1000;
@@ -150,12 +150,12 @@ a:inactive{
 
 .pushmenu h3 {
   color: #cbbfad;
-  font-size: 25px;
+  font-size: 14px;
   font-weight: bold;
   padding: 15px 20px;
   margin: 0;
   background: #282522;    
-  height: 50px;
+  height: 100px;
 }
 
 .pushmenu a {
@@ -207,13 +207,13 @@ a:inactive{
 #nav_list {
   background: url(https://raw.github.com/w601sxs/EtherLoops/master/icon_nav.png) no-repeat left top;
   cursor: pointer;
-  height: 30px; //27
-  width: 33px; //33
+  height: 27px;
+  width: 33px;
   text-indent: -99999em;
 }
 
 nav-list.active {
-  background-position: -33px top; //-33
+  background-position: -33px top;
 }
 
  .buttonset {
