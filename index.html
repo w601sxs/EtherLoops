@@ -42,7 +42,7 @@
             $(document).on('click','#sp span',function(){
                 if ($(this).css('background-color') === 'rgba(0, 0, 0, 0)')
                 {
-                    $(this).css('background-color', 'rgba(0, 0, 1, 0)');
+                    $(this).css('background-color', randomColor);
                     this.addToLoops();
                 }else{
                     this.stop();
@@ -58,7 +58,7 @@
                 });
             });
         </script>
-        <title>Loopr</title>
+        <title>EtherLoops</title>
     </head>
 
 <body>
