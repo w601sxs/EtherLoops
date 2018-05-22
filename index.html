@@ -88,21 +88,25 @@
                     $( this ).toggleClass( "active" );
  
                 });
-		    
-		$(function () {
-			$('.modal').modal();
-  			$('select').material_select();
-			});
+
             });
             
 	
 
-    $('#btn-modal').click(function() {
-    	$('.modal').modal();
-    	$('select').material_select();
-	console.log("clicked modal");
-	    
-    });
+(function ($) {
+    $(function () {
+
+        //initialize all modals           
+        $('.modal').modal();
+
+        //now you can open modal from code
+        $('#modal1').modal('open');
+
+        //or by click on trigger
+        $('.trigger-modal').modal();
+
+    }); // end of document ready
+})(jQuery); // end of jQuery name space
 
 
 
@@ -189,45 +193,20 @@
 	
 <!-- POPUP MODAL BUTTON BOOTSTRAP -->
 
-
-<div class='modal modal-fixed-footer'>
-  <div class='modal-content'>
-    <br>
-    <select>
-      <option>Select towards the top</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-    </select>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac sem feugiat, rutrum neque a, mollis nulla. Aliquam in arcu ut lacus facilisis accumsan at sit amet tortor. Curabitur luctus auctor felis, nec feugiat lectus auctor nec. Morbi eu augue id eros lacinia laoreet et at felis. Integer at auctor ante. Integer facilisis placerat sapien, a vulputate quam euismod et. Mauris pretium erat tellus, finibus tincidunt ipsum rutrum in. Quisque laoreet ut dolor non dapibus.</p>
-    <p>Nullam blandit ultricies mauris, id semper ligula bibendum ut. Aliquam eu ipsum ex. Cras fermentum, elit ut molestie placerat, mi magna fringilla elit, sed lobortis lectus velit sit amet nisl. Aenean feugiat, sapien et eleifend consectetur, lorem nisl porta mi, a efficitur dolor risus ac ligula. Suspendisse fermentum magna odio, in dapibus massa lobortis quis. Ut at porta metus. Phasellus et enim nec elit commodo rutrum maximus eu ante. Vivamus magna risus, interdum sit amet mauris sit amet, dapibus imperdiet quam. Suspendisse iaculis vel tellus ac egestas. Vivamus aliquet, tortor nec dignissim porttitor, sapien felis efficitur ipsum, ut rutrum magna nisl sed felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas egestas diam eros, in vestibulum enim rutrum in. Nam vel accumsan metus. Duis imperdiet id diam vel feugiat. Aliquam orci mi, interdum eu ultrices sollicitudin, tristique nec neque. Nunc ultrices massa nec ex molestie commodo.</p>
-    <select>
-      <option>Select towards the bottom</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-      <option>Option</option>
-    </select>
+<a class="waves-effect waves-light btn view" data-target="modal1">View Scores</a>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
   </div>
-  <div class='modal-footer'>
-    <button class='btn'>
-      Footer Btn
-    </button>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
   </div>
 </div>
+
 	
-<button id="btn-modal" class="btn">OPEN MODAL 5</button>
+<button id="btn-modal" class="btn">OPEN MODAL 6</button>
 
 
 </body>
