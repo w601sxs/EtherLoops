@@ -57,7 +57,13 @@
             $(window).load(function(){
                 $('a.btn').click(function(){
                     $( this ).toggleClass( "active" );
-                    $(this).css( "background","blue");
+                    
+                    if ($(this).css('background') === '#2c3e50')
+                    {
+                        $(this).css( "background",randomColor);
+                    }else{
+                        $( this ).css("background","#2c3e50");
+                    }
  
                 });
             });
