@@ -141,7 +141,7 @@ a:inactive{
 .pushmenu { /*this is the nav*/
   background: #3c3933;
   font-family: Arial, Helvetics, sans-serif;
-  width: 20%;
+  width: 40%;
   height: 100%;
   top: 0;
   z-index: 1000;
