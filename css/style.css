@@ -155,7 +155,7 @@ a:inactive{
   padding: 15px 20px;
   margin: 0;
   background: #282522;    
-  height: 100px;
+  height: 50px;
 }
 
 .pushmenu a {
@@ -207,8 +207,8 @@ a:inactive{
 #nav_list {
   background: url(https://raw.github.com/w601sxs/EtherLoops/master/icon_nav.png) no-repeat left top;
   cursor: pointer;
-  height: 50px; //27
-  width: 50px; //33
+  height: 30px; //27
+  width: 33px; //33
   text-indent: -99999em;
 }
 
