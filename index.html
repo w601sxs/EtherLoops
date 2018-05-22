@@ -57,7 +57,7 @@
             $(window).load(function(){
                 $('a.btn').click(function(){
                     $( this ).toggleClass( "active" );
-                    
+                    console.log($(this).css('background'));
                     if ($(this).css('background') === '#2c3e50')
                     {
                         $(this).css( "background",randomColor);
