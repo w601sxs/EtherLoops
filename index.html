@@ -90,7 +90,33 @@
                 });
             });
             
-	
+	// Modal stuff
+	function enteredRange(x, y) {
+    var low = parseFloat(x);
+    var high = parseFloat(y);
+    var middle1 = parseInt((low + high) / 2);
+
+    middle.value = middle1;
+    document.getElementById('middle').value = middle1;
+}
+
+$(document).ready(function () {
+    $('#myModal').bind('show', function () {
+        //do stuf on show
+    });
+    $('#btn-modal').click(function() {
+        $('#myModal').modal('show');
+    });
+});
+
+function closeDialog() {
+    $('#myModal').modal('hide');
+};
+
+function okClicked() {
+    closeDialog();
+};
+		
         </script>
 	
         <title>EtherLoops</title>
@@ -174,82 +200,33 @@
 <!-- POPUP MODAL BUTTON BOOTSTRAP -->
 
 
-
-<!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
-    Launch Normal Form
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close" 
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Modal title
-                </h4>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+         <h3 id="myModalLabel">Get Middle.</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-inline">
+            <div class="input-prepend"> <span class="add-on">$</span>
+                <input class="span2" id="lowSide" type="text" />
             </div>
-            
-            <!-- Modal Body -->
-            <div class="modal-body">
-                
-                <form role="form">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control"
-                      id="exampleInputEmail1" placeholder="Enter email"/>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control"
-                          id="exampleInputPassword1" placeholder="Password"/>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                        <input type="checkbox"/> Check me out
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                
-                
+            to
+            <div class="input-prepend"> <span class="add-on">$</span>
+                <input class="span2" id="highSide" type="text" />
             </div>
-            
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">
-                            Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                    Save changes
-                </button>
-            </div>
+            <button class="btn" onClick="enteredRange(lowSide.value,highSide.value)">Enter</button>
+        </div>
+        <br />
+        <div class="form-inline">
+            <label>middle:</label>
+            <input id="middle" type="text" />
         </div>
     </div>
 </div>
+<br />
+<button id="btn-modal" class="btn">OPEN MODAL</button>
 
 
-
-
-
-<!-- Post Info -->
-<div style='position:fixed;bottom:0;left:0; background:lightgray;width:100%;'>
-    About this SO Question:
-    <a href='http://stackoverflow.com/q/26562900/1366033'>
-        Twitter Bootstap - form in Modal fomatting
-    </a><br/>
-    Fork This Skeleton Here: 
-    <a href='http://jsfiddle.net/KyleMit/kcpma/'>
-        Bootstrap 3 Skeleton
-    </a><br/>
-</div>
 </body>
 </html>
