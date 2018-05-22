@@ -141,7 +141,7 @@ a:inactive{
 .pushmenu { /*this is the nav*/
   background: #3c3933;
   font-family: Arial, Helvetics, sans-serif;
-  width: 40%;
+  width: 240px;
   height: 100%;
   top: 0;
   z-index: 1000;
@@ -213,7 +213,7 @@ a:inactive{
 }
 
 nav-list.active {
-  background-position: 0px top; //33
+  background-position: -33px top; //-33
 }
 
  .buttonset {
