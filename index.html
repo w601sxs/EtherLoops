@@ -58,14 +58,15 @@
                 $('a.btn').click(function(){
                    
                     console.log($(this).attr('class'));
-                    if ($(this).attr('class') === 'active')
+                    if ($(this).attr('class') === 'btn active')
                     {
                         $(this).css( "background","rgba(44,62,80,1)");
-                        $( this ).toggleClass( "inactive" );
+                        
                     }else{
                         $( this ).css("background",randomColor);
-                        $( this ).toggleClass( "active" );
+                        
                     }
+                    $( this ).toggleClass( "active" );
  
                 });
             });
