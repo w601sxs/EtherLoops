@@ -101,11 +101,11 @@
 }
 
 $(document).ready(function () {
-    $('#myModal').bind('show', function () {
-        //do stuf on show
-    });
+    $('.modal').modal({
+    dismissible: true
+});
     $('#btn-modal').click(function() {
-        $('#myModal').modal('show');
+        $('#myModal').modal('open');
     });
 });
 
