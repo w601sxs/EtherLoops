@@ -125,12 +125,12 @@ a:inactive{
         zoom:1;
         background:#7f8c8d;
     }
-    .button-group-navigation li .btn {
+    .button-group-navigation li .btn2 {
         float:left;
         margin-left:-4px;
     }
 
-    .button-group-navigation>.btn:first-child,.button-group-navigation li:first-child .btn {
+    .button-group-navigation>.btn2:first-child,.button-group-navigation li:first-child .btn2 {
         margin-left:0;
       -webkit-border-top-left-radius: 3px;
     -webkit-border-bottom-left-radius: 3px;
@@ -139,7 +139,7 @@ a:inactive{
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     }
-    .button-group-navigation>.btn:last-child,.button-group-navigation li:last-child>.btn {
+    .button-group-navigation>.btn2:last-child,.button-group-navigation li:last-child>.btn2 {
         margin-right: 0;
       -webkit-border-top-right-radius: 3px;
     -webkit-border-bottom-right-radius: 3px;
