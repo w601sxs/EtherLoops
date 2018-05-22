@@ -44,7 +44,6 @@
                 {
                     var cclr = randomColor;
                     $(this).css('background-color', cclr);
-                    $("btn").css( "background","blue" );
                     
                     this.addToLoops();
                 }else{
@@ -58,6 +57,7 @@
             $(window).load(function(){
                 $('a.btn').click(function(){
                     $( this ).toggleClass( "active" );
+                    $(this).css( "background",'blue' );
                 });
             });
         </script>
