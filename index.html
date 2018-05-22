@@ -18,7 +18,7 @@
 
 
 
-            $(document).ready(function () {
+            $(document).on('ready',function () {
 
                 // $('#wrapper').load('partials/128bpm.html');
 		$(".button-collapse").sidenav();
@@ -67,8 +67,8 @@
                 }
             });
 
-            $(window).load(function(){
-                $('a.btn').click(function(){
+            $(window).on('load',function(){
+                $('a.btn').on('click',function(){
                    
                     //console.log($(this).attr('class'));
                     if ($(this).attr('class') === 'btn active')
