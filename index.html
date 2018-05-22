@@ -43,7 +43,7 @@
                 if ($(this).css('background-color') === 'rgba(0, 0, 0, 0)')
                 {
                     var cclr = randomColor;
-                    $(this).css('background-color', cclr);
+                    $(this).css('background-color', 'rgba(0,0,0,1)');
                     
                     this.addToLoops();
                 }else{
@@ -57,7 +57,13 @@
             $(window).load(function(){
                 $('a.btn').click(function(){
                     $( this ).toggleClass( "active" );
-                    $(this).css( "background",'blue' );
+ 
+                    if ($(this).css( "background") != "#2c3e50")
+                    {
+                        $(this).css( "background","#2c3e50");
+                    }else{
+                        $(this).css( "background",randomColor);
+                    }
                 });
             });
         </script>
