@@ -138,11 +138,10 @@ a:inactive{
     }
 
 
-
 .pushmenu { /*this is the nav*/
   background: #3c3933;
   font-family: Arial, Helvetics, sans-serif;
-  width: 100%;
+  width: 240px;
   height: 100%;
   top: 0;
   z-index: 1000;
@@ -171,7 +170,7 @@ a:inactive{
 }
 
 .pushmenu a:hover {
-  background:#f6efff;
+  background:#00A287;
 }
 
 .pushmenu a:active {
@@ -218,7 +217,7 @@ nav-list.active {
 }
 
  .buttonset {
-      background: #f6efff;
+      background: #00A287;
       height: 16px;
       padding: 10px 20px 20px;
  }
