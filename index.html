@@ -36,6 +36,21 @@
 			$('.pushmenu-push').toggleClass('pushmenu-push-toright');
 			$menuLeft.toggleClass('pushmenu-open');
 		});
+		    
+		(function ($) {
+    $(function () {
+
+        //initialize all modals           
+        $('.modal').modal();
+
+        //now you can open modal from code
+        $('#modal1').modal('open');
+
+        //or by click on trigger
+        $('.trigger-modal').modal();
+
+    }); // end of document ready
+})(jQuery); // end of jQuery name space
 		  
             });
             //clicking one of the bpm options will load the appropriate partial, add the audio properties to each span, and then reset the .js to the new beat
@@ -93,20 +108,7 @@
             
 	
 
-(function ($) {
-    $(function () {
 
-        //initialize all modals           
-        $('.modal').modal();
-
-        //now you can open modal from code
-        $('#modal1').modal('open');
-
-        //or by click on trigger
-        $('.trigger-modal').modal();
-
-    }); // end of document ready
-})(jQuery); // end of jQuery name space
 
 
 
@@ -193,7 +195,7 @@
 	
 <!-- POPUP MODAL BUTTON BOOTSTRAP -->
 
-<a class="waves-effect waves-light btn view" data-target="modal1">View Scores</a>
+<p align="center><a class="waves-effect waves-light btn view" data-target="modal1">View Scores</a></p>
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
   <div class="modal-content">
@@ -205,8 +207,6 @@
   </div>
 </div>
 
-	
-<button id="btn-modal" class="btn">OPEN MODAL 6</button>
 
 
 </body>
