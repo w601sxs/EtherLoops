@@ -42,7 +42,9 @@
             $(document).on('click','#sp span',function(){
                 if ($(this).css('background-color') === 'rgba(0, 0, 0, 0)')
                 {
-                    $(this).css('background-color', randomColor);
+                    var cclr = randomColor;
+                    $(this).css('background-color', cclr);
+                    $(this).css('color',cclr);
                     this.addToLoops();
                 }else{
                     this.stop();
