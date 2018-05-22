@@ -19,10 +19,7 @@
                     return "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ",1)";
                 };
 
-	  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
+
 
             $(document).ready(function () {
 
@@ -91,7 +88,8 @@
                 });
             });
             
-            
+            $(".button-collapse").sidenav();
+		
         </script>
 	
         <title>EtherLoops</title>
@@ -140,15 +138,25 @@
      
 </div>
 <script src="js/loopr_canvas.js"></script>
-  <nav> <!-- navbar content here  --> </nav>
-
-  <ul id="slide-out" class="sidenav">
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+<nav>
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo">Booking</a>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="#">Patients</a></li>
+    <li><a href="#">Patients History</a></li>
+    <li><a href="#">Bookings</a></li>
+    <li><a href="#">Notes</a></li>
+    <li><a href="#">Add Patient</a></li>
   </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <ul id="slide-out" class="side-nav">
+    <li class="bold"><a href="#" class="waves-effect waves-teal">Patients</a></li>
+    <li class="bold"><a href="#">Patients History</a></li>
+    <li><a href="#">Bookings</a></li>
+    <li><a href="#">Notes</a></li>
+    <li><a href="#">Add Patient</a></li>
+  </ul>
+  </div>
+</nav>
 </body>
 </html>
