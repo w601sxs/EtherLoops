@@ -22,6 +22,16 @@
                 $('#sp span').each(function () {
                     addAudioProperties(this);
                 });
+                
+                // sidebar
+                $menuLeft = $('.pushmenu-left');
+		        $nav_list = $('#nav_list');
+		        
+		        $nav_list.click(function() {
+			        $(this).toggleClass('active');
+			        $('.pushmenu-push').toggleClass('pushmenu-push-toright');
+			        $menuLeft.toggleClass('pushmenu-open');
+		        });
 
             });
 
@@ -71,7 +81,6 @@
                 });
             });
             
-            $('.sidebar').sidebar();
             
         </script>
         <title>EtherLoops</title>
@@ -118,12 +127,31 @@
      
 </div>
 <script src="js/loopr_canvas.js"></script>
-<div class="sidebar">
-<div class="toolbar">
-    Toolbar
-</div>
-<p>This is a sidebar</p>
-<p>It contains stuff, and you can resize it</p>
-</div>
+ <nav class="pushmenu pushmenu-left">
+    <h3>Menu</h3>
+    <a href="#">Home</a>
+    <a href="#">Nav2</a>
+    <a href="#">Nav3</a>
+    <a href="#">Nav4</a>
+    <a href="#">Nav5</a>
+    <a href="#">Nav6</a>
+    <a href="#">Nav7</a>
+  </nav>
+  
+<div class="container">
+        <div class="main">
+        <section class="buttonset">
+            <div id="nav_list">Menu</div>
+        </section>
+      
+    <section class="content">
+      <h1>Slideout Navigation</h1>
+      <p>
+        
+      </p>
+      
+    </section><!-- End Content -->
+  </div><!-- End Main -->
+</div><!-- End Container -->
 </body>
 </html>
