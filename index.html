@@ -88,13 +88,20 @@
                     $( this ).toggleClass( "active" );
  
                 });
+		    
+		$(function () {
+			$('.modal').openModal();
+  			$('select').material_select();
+			});
             });
             
-
+	
 
     $('#btn-modal').click(function() {
-    $('.modal').openModal();
-    $('select').material_select();
+    	$('.modal').openModal();
+    	$('select').material_select();
+	console.log("clicked modal");
+	    
     });
 
 
