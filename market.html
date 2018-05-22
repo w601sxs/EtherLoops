@@ -18,28 +18,113 @@
         <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
         <script>
             
-$("#lightbox").on("click", "a.add", function(){
-    var new_caption = prompt("Enter a new caption");
-    if(new_caption){
-       var parent_id = $(this).data("id"),
-           img_title = $(parent_id).data("title"),
-           new_caption_tag = "<span class='caption'>" + new_caption + "</span>";
-        
-       $(parent_id).attr("data-title", img_title.replace(/<span class='caption'>.*<\/span>/, new_caption_tag));
-       $(this).next().next().text(new_caption);
-       
-       // Make an AJAX request to save the data to the database
-    }
-    
-});
+            randomColor = function () {
+                    return "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ",1)";
+                };
+            $(document).ready(function () {
+                // $('#wrapper').load('partials/128bpm.html');
+                //for each div, let's get the URL and give each div the audio functions
+                $('#sp span').each(function () {
+                    addAudioProperties(this);
+                });
+		    
+		$menuLeft = $('.pushmenu-left');
+		$nav_list = $('#nav_list');
+		
+		$nav_list.click(function() {
+			$(this).toggleClass('active');
+			$('.pushmenu-push').toggleClass('pushmenu-push-toright');
+			$menuLeft.toggleClass('pushmenu-open');
+		});
+		  
+            });
+            //clicking one of the bpm options will load the appropriate partial, add the audio properties to each span, and then reset the .js to the new beat
+            $(document).on('click','a.new-bpm',function(){
+                 var bpm = $(this).attr('bpm');
+                 $('#wrapper').load('partials/' + bpm + 'bpm.html', function(){
+                    $('#sp span').each(function () {
+                        addAudioProperties(this);
+                    });
+                    changeBPM(bpm);
+                 });
+		 context.resume().then(() => {
+    			console.log('Playback resumed successfully 1');
+  		 });
+                 return false;
+            });
+            //on click, check to see if we have a grey box or a colored box
+            //play or stop accordingly
+            $(document).on('click','#sp span',function(){
+		
+		 context.resume().then(() => {
+    			console.log('Playback resumed successfully 2');
+  		 });
+		 
+                if ($(this).css('background-color') === 'rgba(0, 0, 0, 0)')
+                {
+                    var cclr = randomColor;
+                    $(this).css('background-color', 'rgba(0,0,0,1)');
+                    
+                    this.addToLoops();
+                }else{
+                    this.stop();
+                    this.removeLoop();
+                    $(this).css('background-color','rgba(0, 0, 0, 0)');
+                    $(this).css('opacity',1);
+                }
+            });
+            $(window).load(function(){
+                $('a.btn').click(function(){
+                   
+                    //console.log($(this).attr('class'));
+                    if ($(this).attr('class') === 'btn active')
+                    {
+                        $(this).css( "background","rgba(44,62,80,1)");
+                        
+                    }else{
+                        $( this ).css("background",randomColor);
+                        
+                    }
+                    $( this ).toggleClass( "active" );
+ 
+                });
+            });
             
 	
         </script>
 	
-        <title>EtherLoops Market</title>
+        <title>EtherLoops</title>
     </head>
 
 <body class="pushmenu-push">
+<!-- MENU STUFF -->
+<nav class="pushmenu pushmenu-left">
+    <h3>EtherLoops</h3>
+    <a href="EtherLoops">Home</a>
+    <a href="/EtherLoops/market.html">Buy plates</a>
+    <a href="#">Publish Loop</a>
+    <a href="#">Trade</a>
+    <a href="#">Donate</a>
+  </nav>
+  
+<div class="container">
+        <div class="main">
+        <section class="buttonset">
+            <div id="nav_list">Menu</div>
+        </section>
+      
+    <section class="content">
+      <p>
+    	
+      </p>
+      
+    </section><!-- End Content -->
+  </div><!-- End Main -->
+</div><!-- End Container --> 
+	
+	
+<!-- AUDIO STUFF -->	
+	
 <a href="http://saccc567.com/Shows/2014/SACCC_Show/100_0000-Banner_01.JPG" 
   data-lightbox="gallery-1"
   data-title="<a class='add' href='#' data-id='#1'>Add/edit caption</a>￼ ￼
