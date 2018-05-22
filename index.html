@@ -35,7 +35,7 @@
                     changeBPM(bpm);
                  });
 		 context.resume().then(() => {
-    			console.log('Playback resumed successfully');
+    			console.log('Playback resumed successfully 1');
   		 });
                  return false;
             });
@@ -43,6 +43,11 @@
             //on click, check to see if we have a grey box or a colored box
             //play or stop accordingly
             $(document).on('click','#sp span',function(){
+		
+		 context.resume().then(() => {
+    			console.log('Playback resumed successfully 2');
+  		 });
+		 
                 if ($(this).css('background-color') === 'rgba(0, 0, 0, 0)')
                 {
                     var cclr = randomColor;
