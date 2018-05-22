@@ -210,7 +210,7 @@ a:inactive{
   cursor: pointer;
   height: 27px;
   width: 33px;
-  text-indent: 0em;
+  text-indent: -99999em;
 }
 
 nav-list.active {
