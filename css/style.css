@@ -4,7 +4,7 @@ body {
 }
 
 .backgroundlayer {
-    background:rgba(40, 40, 40, 0.7);
+    background:rgba(40, 40, 40, 0.4);
     position: fixed;
     top: 200px;
     width: 101%;
