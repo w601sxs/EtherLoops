@@ -104,7 +104,10 @@
                 });
 		
 $('#button1234').click(function() {
-    alert('Hi');
+        console.log("inclick");
+	$('.modal').modal();
+        //now you can open modal from code
+        $('#modal1').modal('open');
 });
 
             });
