@@ -155,7 +155,7 @@ a:inactive{
   padding: 15px 20px;
   margin: 0;
   background: #282522;    
-  height: 16px;
+  height: 20px;
 }
 
 .pushmenu a {
@@ -218,7 +218,7 @@ nav-list.active {
 
  .buttonset {
       background: #00A287;
-      height: 16px;
+      height: 30px;
       padding: 10px 20px 20px;
  }
  
