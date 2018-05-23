@@ -245,9 +245,9 @@ nav-list.active {
 	position: relative;
 	background: none;
 	border: 0;
-	padding: 0.8em 1em;
-	font-size: 1.3em;
-	cursor: pointer;
+	padding: 0.3em 0.5em;
+	font-size: 1em;
+	cursor: progress;
   outline: 0;
 
 	-webkit-appearance: none;
@@ -260,7 +260,7 @@ nav-list.active {
 
 /* Green button */
 .ladda-button.green {
-	background: #2aca76;
+	background: #28a49b;
 	color: #fff;
 	border-radius: 2px;
 	border: 1px solid transparent;
