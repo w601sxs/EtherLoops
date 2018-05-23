@@ -57,8 +57,7 @@ function startFocusOut(){
 
 $("#items > li").click(function(){
 $("#op").text("You have selected "+$(this).text());
-alert('hello');
-location.href = 'https://w601sxs.github.io/EtherLoops/payment.html';
+$(location).attr('href', 'https://w601sxs.github.io/EtherLoops/payment.html')
 
 });
 		
