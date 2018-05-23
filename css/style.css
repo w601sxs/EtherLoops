@@ -245,8 +245,8 @@ nav-list.active {
 	position: relative;
 	background: none;
 	border: 0;
-	padding: 0.5em 0.9em;
-	font-size: 0.7em;
+	padding: 0.5em 0.85em;
+	font-size: 0.6em;
 	cursor: progress;
   outline: 0;
 
