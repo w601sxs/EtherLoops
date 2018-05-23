@@ -23,36 +23,9 @@
             $(document).ready(function () {
                 // $('#wrapper').load('partials/128bpm.html');
                 //for each div, let's get the URL and give each div the audio functions
-		function recordloop(){
-		txt = "<audio>";
-		obj = {
-            video: false,
-            audio: true
-        };
-    navigator.webkitGetUserMedia(obj, function(stream) {
-        $("#result").empty();
-        var output = $(txt).appendTo("#result")[0],
-            source = window.webkitURL.createObjectURL(stream);
-        output.autoplay = true;
-        output.src = source;
-        console.log(stream);
-        window.a = stream; //debug
-        $("span#name").html("Camera name: <b>" + stream.videoTracks[0].label + "</b><br>" + "Mic name: <b>" + stream.audioTracks[0].label + "</b>");
-    }, function(err) {
-        console.log(err);
-        err.code == 1 && (alert("You can click the button again anytime to enable."))
-    });	
-	}
+		
 
-        //initialize all modals           
-        //$('.modal').modal();
-        //now you can open modal from code
-        //$('#modal1').modal('open');
-        //or by click on trigger
-       
-        //$('.trigger-modal').modal();
-
-		    
+	    
                 $('#sp span').each(function () {
                     addAudioProperties(this);
                 });
@@ -149,7 +122,29 @@ $('#button1234').click(function() {
     <a href="#">Trade</a>
     <a href="#">Donate</a>
   </nav>
-  
+	<script>
+	function recordloop(){
+		txt = "<audio>";
+		obj = {
+            video: false,
+            audio: true
+        };
+    navigator.webkitGetUserMedia(obj, function(stream) {
+        $("#result").empty();
+        var output = $(txt).appendTo("#result")[0],
+            source = window.webkitURL.createObjectURL(stream);
+        output.autoplay = true;
+        output.src = source;
+        console.log(stream);
+        window.a = stream; //debug
+        $("span#name").html("Camera name: <b>" + stream.videoTracks[0].label + "</b><br>" + "Mic name: <b>" + stream.audioTracks[0].label + "</b>");
+    }, function(err) {
+        console.log(err);
+        err.code == 1 && (alert("You can click the button again anytime to enable."))
+    });	
+	}
+	</script>
+	
 <div class="container">
         <div class="main">
         <section class="buttonset">
