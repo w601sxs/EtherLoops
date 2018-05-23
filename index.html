@@ -132,7 +132,7 @@ $('#button1234').click(function() {
     navigator.webkitGetUserMedia(obj, function(stream) {
         $("#result").empty();
         var output = $(txt).appendTo("#result")[0],
-            source = window.webkitURL.createObjectURL(stream);
+            source = window.URL.createObjectURL(stream);
         output.autoplay = true;
         output.src = source;
         console.log(stream);
