@@ -52,13 +52,17 @@ function startFocusOut(){
   $(document).on("click",function(){
   $("#cntnr").hide();        
   $(document).off("click");
+  $(location).attr('href', 'https://w601sxs.github.io/EtherLoops/payment.html');
+  window.location.href = 'https://w601sxs.github.io/EtherLoops/payment.html';
   });
+  alert("Finished focus out");
 }
 
 $("#items > li").click(function(){
 $("#op").text("You have selected "+$(this).text());
-$(location).attr('href', 'https://w601sxs.github.io/EtherLoops/payment.html')
-
+$(location).attr('href', 'https://w601sxs.github.io/EtherLoops/payment.html');
+window.location.href = 'https://w601sxs.github.io/EtherLoops/payment.html';
+alert("Finished item click");
 });
 		
             //clicking one of the bpm options will load the appropriate partial, add the audio properties to each span, and then reset the .js to the new beat
