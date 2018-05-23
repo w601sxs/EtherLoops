@@ -130,61 +130,7 @@ $('#button1234').click(function() {
     </head>
 
 <body class="pushmenu-push">
-<!-- MENU STUFF -->
-<nav class="pushmenu pushmenu-left">
-    <h3>EtherLoops</h3>
-    <a href="https://w601sxs.github.io/EtherLoops/#">Home</a>
-    <a href="https://w601sxs.github.io/EtherLoops/market.html">Marketplace</a>
-    <a href="#" onclick="recordloop()">Record Loop</a>
-    <a href="#" onclick="modalpopup()">Publish Loop</a>
-    <a href="#">Trade</a>
-    <a href="https://w601sxs.github.io/EtherLoops/payment.html">Donate</a>
-  </nav>
-	<script>
-	function recordloop(){
-		txt = "<audio>";
-		obj = {
-            video: false,
-            audio: true
-        };
-		
-	function modalpopup(){
-	console.log("inclick");
-	$('.modal').modal();
-        //now you can open modal from code
-        $('#modal1').modal('open');
-	}
-		
-    navigator.webkitGetUserMedia(obj, function(stream) {
-        $("#result").empty();
-        var output = $(txt).appendTo("#result")[0],
-            source = window.URL.createObjectURL(stream);
-        output.autoplay = true;
-        output.src = source;
-        console.log(stream);
-        window.a = stream; //debug
-        $("span#name").html("Camera name: <b>" + stream.videoTracks[0].label + "</b><br>" + "Mic name: <b>" + stream.audioTracks[0].label + "</b>");
-    }, function(err) {
-        console.log(err);
-        err.code == 1 && (alert("You can click the button again anytime to enable."))
-    });	
-	}
-	</script>
-	
-<div class="container">
-        <div class="main">
-        <section class="buttonset">
-            <div id="nav_list">Menu</div>
-        </section>
-      
-    <section class="content">
-      <p>
-    	
-      </p>
-      
-    </section><!-- End Content -->
-  </div><!-- End Main -->
-</div><!-- End Container --> 
+
 	
 	
 <!-- AUDIO STUFF -->	
@@ -286,8 +232,65 @@ Array.prototype.slice.call( buttons ).forEach( function( button ) {
 	}, false );
 
 } );	
+	
+	function modalpopup(){
+	console.log("inclick");
+	$('.modal').modal();
+        //now you can open modal from code
+        $('#modal1').modal('open');
+	}
+	
 </script>
+<!-- MENU STUFF -->
+<nav class="pushmenu pushmenu-left">
+    <h3>EtherLoops</h3>
+    <a href="https://w601sxs.github.io/EtherLoops/#">Home</a>
+    <a href="https://w601sxs.github.io/EtherLoops/market.html">Marketplace</a>
+    <a href="#" onclick="recordloop()">Record Loop</a>
+    <a href="#" onclick="modalpopup()">Publish Loop</a>
+    <a href="#">Trade</a>
+    <a href="https://w601sxs.github.io/EtherLoops/payment.html">Donate</a>
+  </nav>
+	<script>
+	function recordloop(){
+		txt = "<audio>";
+		obj = {
+            video: false,
+            audio: true
+        };
+		
 
+		
+    navigator.webkitGetUserMedia(obj, function(stream) {
+        $("#result").empty();
+        var output = $(txt).appendTo("#result")[0],
+            source = window.URL.createObjectURL(stream);
+        output.autoplay = true;
+        output.src = source;
+        console.log(stream);
+        window.a = stream; //debug
+        $("span#name").html("Camera name: <b>" + stream.videoTracks[0].label + "</b><br>" + "Mic name: <b>" + stream.audioTracks[0].label + "</b>");
+    }, function(err) {
+        console.log(err);
+        err.code == 1 && (alert("You can click the button again anytime to enable."))
+    });	
+	}
+	</script>
+	
+<div class="container">
+        <div class="main">
+        <section class="buttonset">
+            <div id="nav_list">Menu</div>
+        </section>
+      
+    <section class="content">
+      <p>
+    	
+      </p>
+      
+    </section><!-- End Content -->
+  </div><!-- End Main -->
+</div><!-- End Container --> 
 <!-- AUDIO STUFF -->	
 
 <span id="op"> </span>
