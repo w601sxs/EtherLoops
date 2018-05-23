@@ -200,8 +200,24 @@ $('#button1234').click(function() {
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
   <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
+    <h4>Publish Loop</h4>
+    <p>This will submit your loop to th emarketplace with a minimum bid amount and a Buy Now amount...</p>
+    <!-------->
+            <div class="form-inline">
+            <div class="input-prepend"> <span class="add-on">$</span>
+                <input class="span2" id="lowSide" type="text" />
+            </div>
+            to
+            <div class="input-prepend"> <span class="add-on">$</span>
+                <input class="span2" id="highSide" type="text" />
+            </div>
+            <button class="btn" onClick="enteredRange(lowSide.value,highSide.value)">Enter</button>
+        </div>
+        <br />
+        <div class="form-inline">
+            <label>middle:</label>
+            <input id="middle" type="text" />
+        </div>
   </div>
   <div class="modal-footer">
     <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
