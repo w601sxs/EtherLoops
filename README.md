@@ -7,6 +7,8 @@ EtherLoops is an Ethereum dApp that has the following contracts:
 
 ## Powered by
 [![N|Solid](https://openzeppelin.org/img/openzeppelin-logo.png)](https://openzeppelin.org)
+
+----
 Ether Loop Coin (ELC) contract was less than 15 lines long. Fantastic!
 
 ## Pre-requisites
