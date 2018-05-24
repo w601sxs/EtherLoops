@@ -4,7 +4,7 @@ App = {
 
   init: function() {
     // Load pets.
-    $.getJSON('https://github.com/w601sxs/EtherLoops/pets.json', function(data) {
+    $.getJSON('https://raw.githubusercontent.com/w601sxs/EtherLoops/master/pets.json', function(data) {
       var petsRow = $('#petsRow');
       var petTemplate = $('#petTemplate');
 
