@@ -1,0 +1,130 @@
+[
+  {
+    "id": 0,
+    "name": "Curated by Frieda",
+    "picture": "images/1.PNG",
+    "age": 3,
+    "breed": "Jazz",
+    "location": "Lisco, Alabama"
+  },
+  {
+    "id": 1,
+    "name": "Curated by Gina",
+    "picture": "images/2.PNG",
+    "age": 3,
+    "breed": "Rock",
+    "location": "Tooleville, West Virginia"
+  },
+  {
+    "id": 2,
+    "name": "Curated by Collins",
+    "picture": "images/3.PNG",
+    "age": 2,
+    "breed": "Fusion",
+    "location": "Freeburn, Idaho"
+  },
+  {
+    "id": 3,
+    "name": "Curated by Melissa",
+    "picture": "images/4.PNG",
+    "age": 2,
+    "breed": "EDM",
+    "location": "Camas, Pennsylvania"
+  },
+  {
+    "id": 4,
+    "name": "Curated by Jeanine",
+    "picture": "images/5.PNG",
+    "age": 2,
+    "breed": "Fusion",
+    "location": "Gerber, South Dakota"
+  },
+  {
+    "id": 5,
+    "name": "Curated by Elvia",
+    "picture": "images/6.PNG",
+    "age": 3,
+    "breed": "Classical",
+    "location": "Innsbrook, Illinois"
+  },
+  {
+    "id": 6,
+    "name": "Curated by Latisha",
+    "picture": "images/7.PNG",
+    "age": 3,
+    "breed": "Freestyle",
+    "location": "Soudan, Louisiana"
+  },
+  {
+    "id": 7,
+    "name": "Curated by Coleman",
+    "picture": "images/8.PNG",
+    "age": 3,
+    "breed": "Funk",
+    "location": "Jacksonwald, Palau"
+  },
+  {
+    "id": 8,
+    "name": "Curated by Nichole",
+    "picture": "images/9.PNG",
+    "age": 2,
+    "breed": "EDM",
+    "location": "Honolulu, Hawaii"
+  },
+  {
+    "id": 9,
+    "name": "Curated by Fran",
+    "picture": "images/10.PNG",
+    "age": 3,
+    "breed": "BGM",
+    "location": "Matheny, Utah"
+  },
+  {
+    "id": 10,
+    "name": "Curated by Leonor",
+    "picture": "images/11.PNG",
+    "age": 2,
+    "breed": "Epic",
+    "location": "Tyhee, Indiana"
+  },
+  {
+    "id": 11,
+    "name": "Curated by Dean",
+    "picture": "images/12.PNG",
+    "age": 3,
+    "breed": "Classical",
+    "location": "Windsor, Montana"
+  },
+  {
+    "id": 12,
+    "name": "Curated by Stevenson",
+    "picture": "images/13.PNG",
+    "age": 3,
+    "breed": "Fusion",
+    "location": "Kingstowne, Nevada"
+  },
+  {
+    "id": 13,
+    "name": "Curated by Kristina",
+    "picture": "images/14.PNG",
+    "age": 4,
+    "breed": "Jazz",
+    "location": "Sultana, Massachusetts"
+  },
+  {
+    "id": 14,
+    "name": "Curated by Ethel",
+    "picture": "images/15.PNG",
+    "age": 2,
+    "breed": "Beats",
+    "location": "Broadlands, Oregon"
+  },
+  {
+    "id": 15,
+    "name": "Curated by Terry",
+    "picture": "images/16.PNG",
+    "age": 2,
+    "breed": "Dubstep",
+    "location": "Dawn, Wisconsin"
+  }
+]
